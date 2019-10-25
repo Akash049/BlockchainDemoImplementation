@@ -1,7 +1,7 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, request, jsonify, render_template
 from time import time
 from flask_cors import CORS
-
+from collections import OrderedDict
 
 class Blockchain:
 
@@ -25,6 +25,23 @@ class Blockchain:
         self.transactions = []
         self.chain.append(block)
 
+    def submit_transaction(self, sender_public_key, recipient_public_key, signature, amount):
+        # TODO : Reward the minor
+        # TODO : Signature validation
+        transaction = OrderedDict({
+            'sender_public_key' : sender_public_key,
+            'recipient_public_key' : recipient_public_key,
+            'signature' : signature,
+            'amount' : amount
+        })
+        signature_verification = True
+        if signature_verification:
+            self.transactions.append(transaction)
+            return len(self.chain) + 1
+        else:
+            return False
+
+
 
 # Instantiate the Blockchain
 blockchain = Blockchain()
@@ -41,8 +58,16 @@ def index():
 
 @app.route('/transactions/new', methods=['POST'])
 def new_transaction():
-    response = {'message': 'Ok'}
-    return jsonify(response), 201
+    values = request.form
+
+    # Check the required field
+    transaction_result = blockchain.submit_transaction(values['confirmation_sender_public_key'], values['confirmation_recipient_public_key'], values['transaction_signature'], values['confirmation_amount'])
+    if transaction_result == False:
+        response = {'message': 'Invalid Transaction'}
+        return jsonify(response), 406
+    else:
+        response = {'message': 'Transaction will be added to the block' + str(transaction_result)}
+        return jsonify(response), 201
 
 
 if __name__ == '__main__':

@@ -220,7 +220,7 @@
                     type: 'POST',
                     dataType: 'json',
                     header: {'Access-Control-Allow-Origin' : '*'},
-                    data: $('confirmation_transaction_form').serialize(),
+                    data: $('#confirmation_transaction_form').serialize(),
                     success: function(response) {
                         $('#sender_public_key').val('');
                         $('#sender_private_key').val('');

@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cd5baee-3572-452c-b7ac-7b1900df8995" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blockchain/templates/configure.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blockchain/blockchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain/blockchain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockchain/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockchain_client/blockchain_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain_client/blockchain_client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blockchain_client/templates/make_transaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain_client/templates/make_transaction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockchain_client/templates/view_transactions.html" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain_client/templates/view_transactions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -26,11 +31,12 @@
   <component name="ProjectId" id="1SZLohGv0EpU6OUpvYV2XVdmqDn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/blockchain_client/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -51,7 +57,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Bob">
+  <component name="RunManager" selected="Python.Node3">
     <configuration name="Alice" type="PythonConfigurationType" factoryName="Python">
       <module name="blockchain_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,7 +100,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Node" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="Node1" type="PythonConfigurationType" factoryName="Python">
       <module name="blockchain_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,7 +113,49 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blockchain/blockchain.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="-p 5001" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Node2" type="PythonConfigurationType" factoryName="Python">
+      <module name="blockchain_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/blockchain" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blockchain/blockchain.py" />
+      <option name="PARAMETERS" value="-p 5002" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Node3" type="PythonConfigurationType" factoryName="Python">
+      <module name="blockchain_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/blockchain" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blockchain/blockchain.py" />
+      <option name="PARAMETERS" value="-p 5003" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -118,7 +166,9 @@
     <list>
       <item itemvalue="Python.Alice" />
       <item itemvalue="Python.Bob" />
-      <item itemvalue="Python.Node" />
+      <item itemvalue="Python.Node1" />
+      <item itemvalue="Python.Node2" />
+      <item itemvalue="Python.Node3" />
     </list>
   </component>
   <component name="SvnConfiguration">

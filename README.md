@@ -7,10 +7,6 @@ This project described a simple implementation of blockchain with following func
 * Validating the transaction by signature validation.
 * Mining the block and adding the transaction.
 
-## This consist of three servers
-* One blockchain server that creates, verifies and saves the transactions
-* The other two are the peer nodes that generated transaction.
-
 ## Development
 * The server side development is done in Flask(Python)
 * The Front-end development is in plain JS and Bootstrap
